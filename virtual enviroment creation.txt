@@ -1,0 +1,26 @@
+advantage:(1) By creating virtual enviroment there will not be any effect in your laptop enviroment.
+          (2) What packages you will install in virtual enviroment that will not be effect outside enviroment. 
+step1: you have to make a folder like (projects)
+step2: that folder will be your virtual enviroment
+step3: write cmd "pip install virtualenv"
+step4: you can chack the verion by cmd "virtualenv --version" of your virtualenv
+step5: now create your virtual enviroment in that folder by cmd "virtualenv pyenv" (pyenv is the name of the virtual enviroment)
+step6: To activate virtual enviroment write cmd "pyenv\Scripts\activate"
+step7: If there is any error occouring then you have to change execution policy then wite cmd
+       "set-executionpolicy remotesigned" to change execution policy.
+step8: Now you can again write cmd "pyenv\Scripts\activage"  your virtual enviroment will be created
+step9: To deactivate this enviroment then write cmd "deactivate"
+step10: If you want to install django version 2.2
+        then write command "pip install django==2.2"
+
+NOTE: If you wona send you poject to your partnet then you no need to give him you full folder
+      for it you have to make a requirement file for your virtual enviroment
+      (1): First activate this VEnviroment 
+      (2): And write command "pip freeze > requirements.txt"
+      (3): Your requiremts.txt file will be created in the folder
+      (4): There will be all the information of the packages which you install for that enviroment
+
+
+
+(One More Thing): If you wona make a enviroment which can access all the packages of your laptop enviroment
+              then write cmd "virtualenv --system-site-packages myenv" (myenv is the name of the enviroment) 
