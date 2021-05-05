@@ -1,5 +1,3 @@
-# Django_Guidance
-<br>
 # why django is used<br>
 (django is a frame work of python programming which is used to make web appl<br>
 <br>
@@ -8,8 +6,8 @@ ication it makes easy to create website )
 
 # if you wona install django in vertual enviroment 
 <br>
-step(1): go to in your virtual enviroment<br>
-<br>step(2): write cmd "pip install django==(django version name)"
+<h1>step(1):</h1> go to in your virtual enviroment<br>
+<br> <h1>step(2):</h1> write cmd "pip install django==(django version name)"
 <br>step(3): By cmd "django-admin --version" you can chack it is installed or not
 
 <br># for create first project
