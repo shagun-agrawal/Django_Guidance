@@ -1,0 +1,34 @@
+Step1: In (forms.py)
+   from django import forms 
+     class Login(forms.Form):
+        username=forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class':'form-control'}))
+        password=forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))  
+
+Step2: In (views.py)
+
+     from .forms import UserForm,Login
+     from django.contrib import messages
+     from django.urls import reverse_lazy
+
+
+      def login(request):
+        if request.method == 'POST':
+           form=Login(request.POST)
+           if form.is_valid():
+             username=form.cleaned_data.get('username')
+             password=form.cleaned_data.get('password') 
+             try:
+                user=User.objects.get(username=username, password=password)
+                messages.success(request,'Successfully loged-in')
+                return HttpResponse("successful")
+             except(User.DoesNotExist):
+                messages.warning(request,'Username or password did not match')
+                return redirect(reverse_lazy('login'))
+        else:
+          form=Login()
+        return render(request,'login.html',{'form':form})
+
+step3:  Now you have to define it into the form (in login.html)
+        {{form.username}}
+        {{form.password}}
+

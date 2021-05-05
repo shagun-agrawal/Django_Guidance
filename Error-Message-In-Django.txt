@@ -1,0 +1,38 @@
+step1: First you have to import message class in (views.py)
+       from django.contrib import messages
+
+step2: Now you have to define the message in any function.
+
+   messages.success(request,'Successfully loged-in')
+   Or
+   messages.warning(request,'Username or password did not match')
+   or
+   messages.danger(request,'any message') 
+   or
+   messages.error(request,"any message")
+   or
+   messages.error(request, f"{any value} any mesaage")
+
+step3: Now you have to access the messa into the html file
+       So you have to make a message framework where you wona
+       shown the message.
+
+
+                       {% if messages %}
+                    <ul class="messages list-group">
+
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="list-group-item list-group-item-{{ message.tags }}" {% endif %}>
+                            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                            {{ message }}
+                            </li>
+                            {% endfor %}
+                    </ul>
+                    {% endif %}
+
+
+
+
+      
+       
+

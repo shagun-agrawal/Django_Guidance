@@ -1,0 +1,13 @@
+To change the name of the project you have to make more change into the files
+step1: change the name of the project as you wish
+step2: (manage.py)
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE',oldprojectname.settings')
+step3: (newprojectname/wsgi.py)
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE','oldprojectname.settings')
+step4: (newprojectname/setting.py)
+        ROOT_URLCONF='oldprojectname.urls' 
+        and
+        WSGI_APPLICATION='oldprojectname.wsgi.application'
+step5: (newprojectname/urls.py)
+       Change oldprojectname which you have import into the urls file
+

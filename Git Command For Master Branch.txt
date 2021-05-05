@@ -1,0 +1,7 @@
+Git Command For Master Branch
+1)- git init
+2)- touch .gitignore  (used for make a gitignore file)
+3)- git add .      (used for add all the files)
+4)- git commit -m "initial commit"  (used for commit all files)
+5)- git branch -a  (used to select the branch)
+6)- git push       (used to push the code)
