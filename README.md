@@ -9,7 +9,8 @@ ication it makes easy to create website )
 <h3>step(1):</h3> go to in your virtual enviroment<br>
 <br> <h3>step(2):</h3> write cmd "pip install django==(django version name)"
 <br><h3>step(3):</h3> By cmd "django-admin --version" you can chack it is installed or not
-# for create first project
+<br>
+<h1> for create first project</h1>
 <br><h3>step(1):</h3>go to in your virtual enviroment
 <br><h3>step(2):</h3>write cmd "django-admin startproject (project name like first_project)" 
 <br><h3>step(3):</h3>go inside your first_project by cmd in this project you will get a manage.py file by this file
