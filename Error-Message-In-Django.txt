@@ -1,7 +1,7 @@
 step1: First you have to import message class in (views.py)
        from django.contrib import messages
 
-step2: Now you have to define the message in any function.
+step2: Now you have to define the message in any function inside (views.py) file.
 
    messages.success(request,'Successfully loged-in')
    Or
