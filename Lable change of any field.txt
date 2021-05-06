@@ -1,0 +1,8 @@
+step1: you have to go inside your (forms.py) file
+       then inside class meta:
+                       fields=['name','email','password']
+                       model=modelname
+                       lables={'name':'Enter Name','email':'Enter Email'}
+
+
+Note: In the lables you have to pass a dictionary......
