@@ -1,0 +1,22 @@
+step1: you have to go inside your (forms.py) file
+       then you have to define widgets by which you can apply css on field
+
+from django import forms
+from django.forms import ModelForm
+from .models import *
+from django.core import validators
+class UserForm(forms.ModelForm):
+    class Meta:
+        model=User
+        fields=['firstname','lastname','email','username','password','confirm_password','birthdate']
+        widgets={
+            'firstname':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter First Name'}),
+            'lastname':forms.TextInput(attrs={'class':'form-control','Placeholder':'Enter Last Name'}),
+            'email':forms.EmailInput(attrs={'class':'form-control','Placeholder':'Enter Email'}),
+            'username':forms.TextInput(attrs={'class':'form-control','placeholder':'Enter UserName'}),
+            'password':forms.PasswordInput(attrs={'class':'form-control','placeholder':'Enter Password'}),
+            'confirm_password':forms.PasswordInput(attrs={'class':'form-control','placeholder':'ReEnter Password'}),
+            'birthdate':forms.TextInput(attrs={'onfocus':"(this.type='date')"}),
+        
+        }
+ 
